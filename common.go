@@ -1,10 +1,11 @@
 package common
 
-import "os"
-import "crypto/tls"
-import "crypto/x509"
-import "io/ioutil"
-import "fmt"
+import (
+	"crypto/tls"
+	"crypto/x509"
+	"io/ioutil"
+	"os"
+)
 
 func MustLoadCertificates() (tls.Certificate, *x509.CertPool) {
 	l := len(os.Args)
